@@ -1,0 +1,55 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+<form action="" method="POST" novalidate autocomplete="off" enctype="multipart/form-data">
+    {{ form.hidden_tag() }}
+
+    <div class="mb-3">
+        {% if form.title.errors %}
+    <ul class="errors">
+    {% for error in form.title.errors %}
+        <li class="alert alert-info" role="alert">{{ error }}</li>
+    {% endfor %}
+    </ul>
+{% endif %}
+        {{ form.title.label }} <br>
+        {{ form.title() }}
+    </div>
+     <div class="mb-3">
+        {% if form.subtitle.errors %}
+    <ul class="errors">
+    {% for error in form.subtitle.errors %}
+        <li class="alert alert-info" role="alert">{{ error }}</li>
+    {% endfor %}
+    </ul>
+{% endif %}
+        {{ form.subtitle.label }} <br>
+        {{ form.subtitle() }}
+    </div>
+    <div class="mb-3">
+        {% if form.pic.errors %}
+    <ul class="errors">
+    {% for error in form.pic.errors %}
+        <li class="alert alert-info" role="alert">{{ error }}</li>
+    {% endfor %}
+    </ul>
+{% endif %}
+        {{ form.pic.label }} <br>
+        {{ form.pic(class="form-control-file") }}
+    </div>
+    <div class="mb-3">
+        {% if form.body.errors %}
+    <ul class="errors">
+    {% for error in body.name.errors %}
+        <li class="alert alert-info" role="alert">{{ error }}</li>
+    {% endfor %}
+    </ul>
+{% endif %}
+        {{ form.body.label }} <br>
+        {{ form.body() }}
+    </div>
+{{ form.submit() }}
+</form>
+
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.date.strftime('%d %B %Y') }}</p>
+        <div>
+            <br>
+        <p>{{ post.subtitle }}</p>
+        <br>
+            <img class="rounded-circle" src="{{ pic }}" alt="image for post">
+        </div>
+        <br>
+        <p>{{ post.body }}</p>
+        <br>
+        <button type="button" class="btn btn-info"><a class="text-white text-decoration-none"  href="{{ url_for('post.update',id=post.id) }}">Update</a></button>
+
+        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Delete
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                 <div class="modal-dialog">
+                 <div class="modal-content">
+                 <div class="modal-header">
+                         <h1 class="modal-title fs-5 text-danger" id="exampleModalLabel">Warning</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  Are you sure you want to remove this post?
+                  </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-info" data-bs-dismiss="modal">Cancel</button>
+                 <button type="button" class="btn btn-danger"><a class="text-white text-decoration-none" href="{{ url_for('post.delete',id=post.id) }}">Delete</a> </button>
+                 </div>
+        </div>
+         </div>
+        </div>
+
+        <hr>
+
+
+
+{% endblock %}

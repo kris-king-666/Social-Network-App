@@ -1,0 +1,19 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+    {% for post in posts %}
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.date.strftime('%d %B %Y') }}</p>
+        <div>
+            <img class="rounded-circle" src="static/images/{{ post.pic }}" alt="image for post">
+        </div>
+        <br>
+        <p>{{ post.subtitle }}</p>
+        <br>
+        <button type="button" class="btn btn-info"><a class="text-white text-decoration-none"  href="{{ url_for('post.viewpost', post_id=post.id) }}">More Details</a></button>
+
+        <hr>
+
+    {% endfor %}
+
+{% endblock %}
