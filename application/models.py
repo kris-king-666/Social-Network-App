@@ -9,6 +9,8 @@ class User(db.Model, UserMixin):
     username = db.Column(db.String(100), nullable=False, unique=True)
     email = db.Column(db.String(100), nullable=False, unique=True)
     pwd_hashed = db.Column(db.String(128))
+    profilepic = db.Column(db.String(250))
+    aboutme = db.Column(db.Text())
     posts = db.relationship('Post', backref='author', lazy=True)
 
     def __repr__(self):

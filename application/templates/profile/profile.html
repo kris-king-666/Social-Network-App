@@ -1,0 +1,13 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+<h3>Profile for {{ user.username|title }}</h3>
+<p>Email address: {{ user.email }}</p>
+<img src="" alt="Profile Pic">
+
+<p>About me: {{ user.aboutme }}</p>
+
+<button><a href="{{ url_for('profile.updateprofile', id=current_user.id) }}">Update</a></button>
+
+
+{% endblock %}

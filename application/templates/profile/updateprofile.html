@@ -6,26 +6,26 @@
     {{ form.hidden_tag() }}
 
     <div class="mb-3">
-        {% if form.title.errors %}
+        {% if form.email.errors %}
     <ul class="errors">
-    {% for error in form.title.errors %}
+    {% for error in form.email.errors %}
         <li class="alert alert-info" role="alert">{{ error }}</li>
     {% endfor %}
     </ul>
 {% endif %}
-        {{ form.title.label }} <br>
-        {{ form.title() }}
+        {{ form.email.label }} <br>
+        {{ form.email() }}
     </div>
     <div class="mb-3">
-        {% if form.subtitle.errors %}
+        {% if form.username.errors %}
     <ul class="errors">
-    {% for error in form.subtitle.errors %}
+    {% for error in form.username.errors %}
         <li class="alert alert-info" role="alert">{{ error }}</li>
     {% endfor %}
     </ul>
 {% endif %}
-        {{ form.subtitle.label }} <br>
-        {{ form.subtitle() }}
+        {{ form.username.label }} <br>
+        {{ form.username() }}
     </div>
 
      <div>
@@ -34,26 +34,26 @@
 
         <br>
     <div class="mb-3">
-        {% if form.pic.errors %}
+        {% if form.profilepic.errors %}
     <ul class="errors">
-    {% for error in form.pic.errors %}
+    {% for error in form.profilepic.errors %}
         <li class="alert alert-info" role="alert">{{ error }}</li>
     {% endfor %}
     </ul>
 {% endif %}
-        {{ form.pic.label }} <br>
-        {{ form.pic(class="form-control-file") }}
+        {{ form.profilepic.label }} <br>
+        {{ form.profilepic(class="form-control-file") }}
     </div>
     <div class="mb-3">
-        {% if form.body.errors %}
+        {% if form.aboutme.errors %}
     <ul class="errors">
-    {% for error in body.name.errors %}
+    {% for error in aboutme.errors %}
         <li class="alert alert-info" role="alert">{{ error }}</li>
     {% endfor %}
     </ul>
 {% endif %}
-        {{ form.body.label }} <br>
-        {{ form.body() }}
+        {{ form.aboutme.label }} <br>
+        {{ form.aboutme() }}
     </div>
 {{ form.submit(class="btn btn-info") }}
 </form>

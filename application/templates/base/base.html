@@ -18,6 +18,9 @@
   <li class="nav-item">
     <a class="nav-link" href="{{ url_for('post.listposts') }}">List of Posts</a>
   </li>
+     <li class="nav-item">
+    <a class="nav-link" href="{{ url_for('profile.viewprofile', id = current_user.id) }}">Profile</a>
+  </li>
   <li class="nav-item">
     <a class="nav-link active" aria-current="page" href="{{ url_for('users.logout') }}">Log Out</a>
   </li>
