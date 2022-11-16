@@ -1,8 +1,31 @@
 {% extends 'base/base.html' %}
 
 {% block content %}
+<div class="masthead"
 
-<h3>Flask Tips and Tricks</h3>
-<h5>A blog for exchanging tips and tricks around Flask</h5>
+       style="background-image:url({{ url_for('static',filename='images/background-image.jpg') }}); background-repeat:no-repeat;">
+
+  <div class="color-overlay d-flex justify-content-center align-items-center">
+    <div class="singleCol container text-center"> <h1>Hello, world!</h1>
+    <p class="lead">
+      <strong>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, beatae blanditiis cupiditate, enim fugit illo labore nam obcaecati pariatur porro quos totam unde, voluptates? Amet doloremque molestiae officiis quasi tempore.
+      </strong>
+    </p>
+      <a href="#" class="btn btn-outline-light"><strong>Learn More</strong></a>
+    </div>
+
+  </div>
+  </div>
+
+  <main>
+    <div class="darkBG py-5">
+      <div class="singleCol container">
+        <p class="lead">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consectetur cumque debitis deleniti doloribus dolorum eaque esse eveniet ex fugiat ipsum itaque magni nisi nostrum, quae quibusdam quos sint vero.
+        </p>
+      </div>
+    </div>
+  </main>
 
 {% endblock %}
