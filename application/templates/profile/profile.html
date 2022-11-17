@@ -1,6 +1,7 @@
 {% extends 'base/base.html' %}
 
 {% block content %}
+
 <h3>Profile for {{ user.username|title }}</h3>
 <p>Email address: {{ user.email }}</p>
 {% if current_user.profilepic %}
@@ -9,7 +10,9 @@
 
 <p>About me: {{ user.aboutme }}</p>
 
-<button><a href="{{ url_for('profile.updateprofile', id=current_user.id) }}">Update</a></button>
+<a class="btn btn-outline-light" href="{{ url_for('profile.updateprofile', id=current_user.id) }}">Update</a>
+
+
 
 
 {% endblock %}

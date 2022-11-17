@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-     <link rel="stylesheet" href="static/custom.css">
+     <link rel="stylesheet" href="{{ url_for('static', filename='custom.css') }}">
   </head>
   <body>
+
   <ul class="nav sticky-top">
     <li class="nav-item">
-    <a class="nav-link active text-muted" aria-current="page" href="{{ url_for('base.index') }}">Home</a>
+    <a class="nav-link active text-muted link-light" aria-current="page" href="{{ url_for('base.index') }}">Home</a>
   </li>
     {% if current_user.is_authenticated %}
     <li class="nav-item">
@@ -35,7 +36,15 @@
     {% endif %}
 </ul>
     <div class="container">
-
+    {% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul>
+    {% for message in messages %}
+      <p class="text-muted">{{ message }}</p>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
         {% block content %}{% endblock %}
 
     </div>

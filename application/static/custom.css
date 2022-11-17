@@ -1,6 +1,8 @@
-body {
-    background-color: #D3D3D3;
-    background-image: linear-gradient(to right, rgba(160,160,160,1), rgba(153,204,255,0));
+body, .dynamicpage {
+
+    background-image: linear-gradient(to right, rgba(179,179,255,1), rgba(153,204,255,0));
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .masthead {

@@ -13,9 +13,9 @@
         <br>
         <p>{{ post.body }}</p>
         <br>
-        <button type="button" class="btn btn-info"><a class="text-white text-decoration-none"  href="{{ url_for('post.update',id=post.id) }}">Update</a></button>
+        <a class = "btn btn-outline-light" class="text-white text-decoration-none"  href="{{ url_for('post.update',id=post.id) }}">Update</a>
 
-        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <button type="button" class = "btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Delete
         </button>
 

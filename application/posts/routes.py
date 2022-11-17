@@ -27,13 +27,14 @@ def save_pic(form_pic):
 def create():
     form = PostForm()
     if form.validate_on_submit():
-        if form.pic.data:
-            picture_file = save_pic(form.pic.data)
         title = form.title.data
         subtitle = form.subtitle.data
-        pic = picture_file
         body = form.body.data
-        newpost = Post(title=title, subtitle=subtitle, pic=pic, body=body, author=current_user)
+        newpost = Post(title=title, subtitle=subtitle,body=body, author=current_user)
+        if form.pic.data:
+            picture_file = save_pic(form.pic.data)
+            newpost.pic = picture_file
+
         db.session.add(newpost)
         db.session.commit()
         flash('New Post has been successfully created')

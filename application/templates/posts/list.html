@@ -10,7 +10,7 @@
         <br>
         <p>{{ post.subtitle }}</p>
         <br>
-        <button type="button" class="btn btn-info"><a class="text-white text-decoration-none"  href="{{ url_for('post.viewpost', post_id=post.id) }}">More Details</a></button>
+        <a class = "btn btn-outline-light"  href="{{ url_for('post.viewpost', post_id=post.id) }}">More Details</a>
 
         <hr>
 

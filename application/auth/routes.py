@@ -18,7 +18,6 @@ def register():
     if form.validate_on_submit():
         name = form.username.data
         newuser = User(username=form.username.data,email=form.email.data)
-        print(newuser)
         newuser.hash_pwd(form.password1.data)
         db.session.add(newuser)
         db.session.commit()

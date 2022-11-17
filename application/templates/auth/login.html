@@ -6,7 +6,7 @@
   <div class="mb-3">
     {% if form.email.errors %}
         {% for error in form.email.errors %}
-        <p class="alert alert-info list-unstyled" role="alert">
+        <p class="text-danger">
             {{ error }}
         </p>
         {% endfor %}
@@ -17,7 +17,7 @@
    <div class="mb-3">
   {% if form.password.errors %}
         {% for error in form.password.errors %}
-        <p class="alert alert-info list-unstyled" role="alert">
+        <p class="text-danger">
             {{ error }}
         </p>
         {% endfor %}

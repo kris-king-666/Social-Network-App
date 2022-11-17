@@ -9,7 +9,7 @@
         {% if form.title.errors %}
     <ul class="errors">
     {% for error in form.title.errors %}
-        <li class="alert alert-info" role="alert">{{ error }}</li>
+        <li class="text-danger">{{ error }}</li>
     {% endfor %}
     </ul>
 {% endif %}
@@ -20,7 +20,7 @@
         {% if form.subtitle.errors %}
     <ul class="errors">
     {% for error in form.subtitle.errors %}
-        <li class="alert alert-info" role="alert">{{ error }}</li>
+        <li class="text-danger">{{ error }}</li>
     {% endfor %}
     </ul>
 {% endif %}
@@ -49,7 +49,7 @@
         {{ form.body.label(class="text-muted") }} <br>
         {{ form.body() }}
     </div>
-{{ form.submit() }}
+{{ form.submit(class = "btn btn-outline-light") }}
 </form>
 
 {% endblock %}

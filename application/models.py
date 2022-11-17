@@ -28,7 +28,7 @@ class Post(db.Model):
     title = db.Column(db.String(250), nullable=False)
     subtitle = db.Column(db.String(250), nullable=False)
     date = db.Column(db.Date, default=datetime.utcnow)
-    pic = db.Column(db.String(250))
+    pic = db.Column(db.String(250),nullable=False, default='default.jpeg')
     body = db.Column(db.Text(), nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
 
