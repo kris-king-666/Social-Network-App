@@ -3,7 +3,9 @@
 {% block content %}
 <h3>Profile for {{ user.username|title }}</h3>
 <p>Email address: {{ user.email }}</p>
-<img src="" alt="Profile Pic">
+{% if current_user.profilepic %}
+<img class="rounded-circle" src="{{ url_for('static', filename='profile_pics/'+current_user.profilepic) }}" alt="image for post">
+{% endif %}
 
 <p>About me: {{ user.aboutme }}</p>
 

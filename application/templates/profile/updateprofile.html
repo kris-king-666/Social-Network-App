@@ -27,11 +27,11 @@
         {{ form.username.label }} <br>
         {{ form.username() }}
     </div>
-
+{% if current_user.profilepic %}
      <div>
-            <img class="rounded-circle" src="{{ pic }}" alt="image for post">
+            <img class="rounded-circle" src="{{ url_for('static', filename='profile_pics/'+current_user.profilepic) }}" alt="image for post">
         </div>
-
+{% endif %}
         <br>
     <div class="mb-3">
         {% if form.profilepic.errors %}

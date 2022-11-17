@@ -13,7 +13,7 @@
     {% endfor %}
     </ul>
 {% endif %}
-        {{ form.title.label }} <br>
+        {{ form.title.label(class="text-muted") }} <br>
         {{ form.title() }}
     </div>
      <div class="mb-3">
@@ -24,7 +24,7 @@
     {% endfor %}
     </ul>
 {% endif %}
-        {{ form.subtitle.label }} <br>
+        {{ form.subtitle.label(class="text-muted") }} <br>
         {{ form.subtitle() }}
     </div>
     <div class="mb-3">
@@ -35,7 +35,7 @@
     {% endfor %}
     </ul>
 {% endif %}
-        {{ form.pic.label }} <br>
+        {{ form.pic.label(class="text-muted") }} <br>
         {{ form.pic(class="form-control-file") }}
     </div>
     <div class="mb-3">
@@ -46,7 +46,7 @@
     {% endfor %}
     </ul>
 {% endif %}
-        {{ form.body.label }} <br>
+        {{ form.body.label(class="text-muted") }} <br>
         {{ form.body() }}
     </div>
 {{ form.submit() }}

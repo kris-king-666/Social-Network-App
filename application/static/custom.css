@@ -1,6 +1,6 @@
 body {
     background-color: #D3D3D3;
-
+    background-image: linear-gradient(to right, rgba(160,160,160,1), rgba(153,204,255,0));
 }
 
 .masthead {
